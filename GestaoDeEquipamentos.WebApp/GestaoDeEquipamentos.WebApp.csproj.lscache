@@ -64,7 +64,12 @@ Compartilhado/
   ContextoJson.cs
   RepositorioBaseEmArquivo.cs
  Infraestrutura/InjecaoDeDependencias.cs
-Modulos/Fabricantes/Dominio/Fabricante.cs
+Modulos/Fabricantes/Apresentacao/
+ FabricanteController.cs
+ FabricanteViewModels.cs
+Modulos/Fabricantes/
+ Dominio/Fabricante.cs
+ Infraestrutura/RepositorioFabricanteEmArquivo.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  GestaoDeEquipamentos.WebApp.AssemblyInfo.cs
@@ -418,8 +423,11 @@ obj/Debug/net10.0/GestaoDeEquipamentos.WebApp.GeneratedMSBuildEditorConfig.edito
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
+Modulos/Fabricantes/Apresentacao/Views/Listar.cshtml
+_ViewImports.cshtml
 
 [dynamicFiles]
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
+Modulos/Fabricantes/Apresentacao/Views/Listar.cshtml
