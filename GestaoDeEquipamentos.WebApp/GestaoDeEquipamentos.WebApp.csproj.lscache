@@ -55,10 +55,21 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
+Compartilhado/Apresentacao/
+ HomeController.cs
+ InjecaoDeDependencia.cs
+Compartilhado/
+ Dominio/EntidadeBase.cs
+ Infraestrutura/Arquivos/
+  ContextoJson.cs
+  RepositorioBaseEmArquivo.cs
+ Infraestrutura/InjecaoDeDependencias.cs
+Modulos/Fabricantes/Dominio/Fabricante.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  GestaoDeEquipamentos.WebApp.AssemblyInfo.cs
  GestaoDeEquipamentos.WebApp.GlobalUsings.g.cs
+ GestaoDeEquipamentos.WebApp.RazorAssemblyInfo.cs
 Program.cs
 
 [metadataReferences]
@@ -402,3 +413,13 @@ Program.cs
 [analyzerConfigFiles]
 <DOTNET>/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
 obj/Debug/net10.0/GestaoDeEquipamentos.WebApp.GeneratedMSBuildEditorConfig.editorconfig
+
+[additionalFiles]
+Compartilhado/Apresentacao/Views/
+ Index.cshtml
+ _Layout.cshtml
+
+[dynamicFiles]
+Compartilhado/Apresentacao/Views/
+ Index.cshtml
+ _Layout.cshtml
