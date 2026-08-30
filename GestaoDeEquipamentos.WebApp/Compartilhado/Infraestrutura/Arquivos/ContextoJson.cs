@@ -10,6 +10,7 @@ public sealed class ContextoJson
 
     public List<Fabricante> Fabricantes { get; set; } = new List<Fabricante>();
     public List<Equipamento> Equipamentos { get; set; } = new List<Equipamento>();
+    public List<Chamado> Chamados { get; set; } = new List<Chamado>();
 
     public ContextoJson()
     {
@@ -66,6 +67,7 @@ public sealed class ContextoJson
     {
         Fabricantes = contexto.Fabricantes;
         Equipamentos = contexto.Equipamentos;
+        Chamados = contexto.Chamados;
     }
 
     public ContextoJson CarregarDadosPredefinidos()
@@ -87,6 +89,12 @@ public sealed class ContextoJson
             new("Monitor Acer", 600m, DateTime.Parse("25/08/2025"), contextoPredefinido.Fabricantes[3]) { Id = 2 },
         });
 
+        contextoPredefinido.Chamados.AddRange(new List<Chamado>
+        {
+            new("Aumento de recurso", "Aumentar a memoria ram do notebook", DateTime.Parse("02/12/2023"), contextoPredefinido.Equipamentos[0]) { Id = 1 },
+            new("Manutenção", "Troca de teclado", DateTime.Parse("25/11/2025"), contextoPredefinido.Equipamentos[1]) { Id = 2 },
+        });
+
         return contextoPredefinido;
     }
 
@@ -94,6 +102,7 @@ public sealed class ContextoJson
     {
         return
             Fabricantes.Count > 0 &&
-            Equipamentos.Count > 0;
+            Equipamentos.Count > 0 &&
+            Chamados.Count > 0;
     }
 }

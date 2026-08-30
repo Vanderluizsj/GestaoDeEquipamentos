@@ -69,7 +69,7 @@ Modulos/Chamados/Apresentacao/
  EquipamentoViewModels.cs
 Modulos/Chamados/
  Dominio/Chamado.cs
- Infraestrutura/RepositorioEquipamentoEmArquivo.cs
+ Infraestrutura/RepositorioChamadoEmArquivo.cs
 Modulos/Equipamentos/Apresentacao/
  EquipamentoController.cs
  EquipamentoViewModels.cs
