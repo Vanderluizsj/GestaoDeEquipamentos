@@ -1,10 +1,10 @@
 using GestaoDeEquipamentos.WebApp.Compartilhado.Dominio;
 
-namespace GestaoDeEquipamentos.WebApp.Modulos.Chamados.Dominio;
+namespace GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Dominio;
 
 public sealed class Equipamento : EntidadeBase
 {
-    public string Titulo { get; set; } = string.Empty;
+    public string Nome { get; set; } = string.Empty;
     public decimal PrecoAquisicao { get; set; }
     public DateTime DataFabricacao { get; set; }
     public Fabricante Fabricante { get; set; } = null!;

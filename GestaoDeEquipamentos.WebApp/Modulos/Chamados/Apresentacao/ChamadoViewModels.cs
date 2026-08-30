@@ -29,7 +29,7 @@ public record CadastrarChamadoViewModel(
     DateTime? DataDeAbertura,
 
     [Range(1, int.MaxValue, ErrorMessage = "O campo \"Equipamentro\" é obrigatório.")]
-    int EquipamentroId,
+    int EquipamentoId,
 
     List<SelecionarEquipamentoViewModel>? EquipamentosDisponiveis
 );
@@ -52,12 +52,12 @@ public record EditarChamadoViewModel(
     DateTime? DataDeAbertura,
 
     [Range(1, int.MaxValue, ErrorMessage = "O campo \"Equipamentro\" é obrigatório.")]
-    int EquipamentroId,
+    int EquipamentoId,
 
     List<SelecionarEquipamentoViewModel>? EquipamentosDisponiveis
 );
 
 public record ExcluirChamadoViewModel(
     int Id,
-    string Nome
+    string Titulo
 );

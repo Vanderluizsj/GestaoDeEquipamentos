@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using GestaoDeEquipamentos.WebApp.Modulos.Chamados.Dominio;
 using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Dominio;
 
 namespace GestaoDeEquipamentos.WebApp.Compartilhado.Infraestrutura.Arquivos;

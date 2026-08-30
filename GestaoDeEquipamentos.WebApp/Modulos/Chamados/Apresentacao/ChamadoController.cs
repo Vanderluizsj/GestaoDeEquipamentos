@@ -1,6 +1,7 @@
 using GestaoDeChamados.WebApp.Modulos.Chamados.Infraestrutura;
 using GestaoDeEquipamentos.WebApp.Modulos.Chamados.Apresentacao;
 using GestaoDeEquipamentos.WebApp.Modulos.Chamados.Dominio;
+using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Dominio;
 using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Infraestrutura;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,8 +29,9 @@ public sealed class ChamadoController : Controller
             ListarChamadoViewModel viewModel = new ListarChamadoViewModel(
                 c.Id,
                 c.Titulo,
-                c.DataAbertura,
-                c.equipamento
+                c.Descricao,
+                c.DataDeAbertura,
+                c.Equipamento.Nome
             );
 
             viewModels.Add(viewModel);
@@ -86,17 +88,17 @@ public sealed class ChamadoController : Controller
     [HttpGet]
     public ActionResult Editar(int id)
     {
-        Chanmado? chamadoSelecionado = repositorioChamado.SelecionarPorId(id);
+        Chamado? chamadoSelecionado = repositorioChamado.SelecionarPorId(id);
 
         if (chamadoSelecionado == null)
             return NotFound();
 
         EditarChamadoViewModel viewModel = new(
-            chamnadoSelecionado.Id,
-            chamnadoSelecionado.Titulo,
-            chamnadoSelecionado.Descricao,
-            chamnadoSelecionado.DataDePublicacao,
-            chamnadoSelecionado.Equipamento.Id,
+            chamadoSelecionado.Id,
+            chamadoSelecionado.Titulo,
+            chamadoSelecionado.Descricao,
+            chamadoSelecionado.DataDeAbertura,
+            chamadoSelecionado.Equipamento.Id,
             ObterEquipamentosDisponiveis()
         );
 
@@ -171,7 +173,7 @@ public sealed class ChamadoController : Controller
 
         foreach (Equipamento e in repositorioEquipamento.SelecionarTodos())
         {
-            SelecionarEquipamentoViewModel viewModel = new(e.Id, e.Titulo);
+            SelecionarEquipamentoViewModel viewModel = new(e.Id, e.Nome);
 
             viewModels.Add(viewModel);
         }
