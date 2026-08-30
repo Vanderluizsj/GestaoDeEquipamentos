@@ -1,5 +1,5 @@
-using GestaoDeEquipamentos.WebApp.Modulos.Fabricantes.Infraestrutura;
 using Microsoft.AspNetCore.Mvc;
+using GestaoDeEquipamentos.WebApp.Modulos.Fabricantes.Infraestrutura;
 
 namespace GestaoDeEquipamentos.WebApp.Modulos.Fabricantes.Apresentacao;
 
@@ -26,6 +26,7 @@ public sealed class FabricanteController : Controller
                 fabricante.Telefone
             ));
         }
+
         return View(viewModels);
     }
 
@@ -114,5 +115,4 @@ public sealed class FabricanteController : Controller
 
         return RedirectToAction(nameof(Listar));
     }
-
 }
