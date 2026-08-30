@@ -65,8 +65,8 @@ Compartilhado/
   RepositorioBaseEmArquivo.cs
  Infraestrutura/InjecaoDeDependencias.cs
 Modulos/Chamados/Apresentacao/
- EquipamentoController.cs
- EquipamentoViewModels.cs
+ ChamadoController.cs
+ ChamadoViewModels.cs
 Modulos/Chamados/
  Dominio/Chamado.cs
  Infraestrutura/RepositorioChamadoEmArquivo.cs
