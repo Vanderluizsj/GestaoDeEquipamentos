@@ -64,6 +64,12 @@ Compartilhado/
   ContextoJson.cs
   RepositorioBaseEmArquivo.cs
  Infraestrutura/InjecaoDeDependencias.cs
+Modulos/Chamados/Apresentacao/
+ EquipamentoController.cs
+ EquipamentoViewModels.cs
+Modulos/Chamados/
+ Dominio/Chamado.cs
+ Infraestrutura/RepositorioEquipamentoEmArquivo.cs
 Modulos/Equipamentos/Apresentacao/
  EquipamentoController.cs
  EquipamentoViewModels.cs
@@ -429,6 +435,11 @@ obj/Debug/net10.0/GestaoDeEquipamentos.WebApp.GeneratedMSBuildEditorConfig.edito
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
+Modulos/Chamados/Apresentacao/Views/
+ Cadastrar.cshtml
+ Editar.cshtml
+ Excluir.cshtml
+ Listar.cshtml
 Modulos/Equipamentos/Apresentacao/Views/
  Cadastrar.cshtml
  Editar.cshtml
@@ -445,6 +456,11 @@ _ViewImports.cshtml
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
+Modulos/Chamados/Apresentacao/Views/
+ Cadastrar.cshtml
+ Editar.cshtml
+ Excluir.cshtml
+ Listar.cshtml
 Modulos/Equipamentos/Apresentacao/Views/
  Cadastrar.cshtml
  Editar.cshtml
