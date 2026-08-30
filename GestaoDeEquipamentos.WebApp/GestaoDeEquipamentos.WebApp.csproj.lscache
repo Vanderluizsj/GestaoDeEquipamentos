@@ -423,11 +423,19 @@ obj/Debug/net10.0/GestaoDeEquipamentos.WebApp.GeneratedMSBuildEditorConfig.edito
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
-Modulos/Fabricantes/Apresentacao/Views/Listar.cshtml
+Modulos/Fabricantes/Apresentacao/Views/
+ Cadastrar.cshtml
+ Editar.cshtml
+ Excluir.cshtml
+ Listar.cshtml
 _ViewImports.cshtml
 
 [dynamicFiles]
 Compartilhado/Apresentacao/Views/
  Index.cshtml
  _Layout.cshtml
-Modulos/Fabricantes/Apresentacao/Views/Listar.cshtml
+Modulos/Fabricantes/Apresentacao/Views/
+ Cadastrar.cshtml
+ Editar.cshtml
+ Excluir.cshtml
+ Listar.cshtml
