@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AdicionarCamadaDeInfra();
 //2. Configurar MVC/Apresentação
 builder.Services.AdicionarCamadaDeApresentacao();
-builder.Services.AddRouting(options => options.LowercaseUrls = true);
 var app = builder.Build();
 
 //Middlewares
