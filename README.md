@@ -52,4 +52,4 @@ Registro do histórico de manutenções de cada equipamento.
 
 1. Faça o clone do repositório:
 ```bash
-git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+git clone https://github.com/Vanderluizsj/GestaoDeEquipamentos.git
