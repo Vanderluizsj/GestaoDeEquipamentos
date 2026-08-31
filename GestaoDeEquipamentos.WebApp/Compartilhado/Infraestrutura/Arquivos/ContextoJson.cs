@@ -12,7 +12,7 @@ public sealed class ContextoJson
     public List<Fabricante> Fabricantes { get; set; } = new List<Fabricante>();
     public List<Equipamento> Equipamentos { get; set; } = new List<Equipamento>();
     public List<Chamado> Chamados { get; set; } = new List<Chamado>();
-
+/*
     public ContextoJson()
     {
         string caminhoAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
@@ -22,7 +22,17 @@ public sealed class ContextoJson
         Directory.CreateDirectory(caminhoDiretorioAplicativo);
 
         caminhoArquivoDados = Path.Join(caminhoDiretorioAplicativo, "dados.json");
-    }
+    }*/
+    public ContextoJson()
+{
+    // Directory.GetCurrentDirectory() pega a raiz do site na Azure (ex: D:\home\site\wwwroot) 
+    // ou a pasta do projeto no localhost
+    string caminhoDiretorioAplicativo = Path.Join(Directory.GetCurrentDirectory(), "DadosApp");
+
+    Directory.CreateDirectory(caminhoDiretorioAplicativo);
+
+    caminhoArquivoDados = Path.Join(caminhoDiretorioAplicativo, "dados.json");
+}
 
     public void Salvar()
     {
