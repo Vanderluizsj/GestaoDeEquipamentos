@@ -471,3 +471,4 @@ Modulos/Fabricantes/Apresentacao/Views/
  Editar.cshtml
  Excluir.cshtml
  Listar.cshtml
+_ViewImports.cshtml

@@ -1,0 +1,93 @@
+{
+  "$id": "1",
+  "Fabricantes": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Nome": "NorteSul Tecnologia ",
+        "Email": "atendimento@nortesultec.com.br",
+        "Telefone": "(31) 3234-5603",
+        "Id": 3
+      },
+      {
+        "$id": "4",
+        "Nome": "InovaOffice Suprimentos Ltda.",
+        "Email": "comercial@inovaoffice.com.br",
+        "Telefone": "(41) 3345-6704",
+        "Id": 4
+      },
+      {
+        "$id": "5",
+        "Nome": "PrimeData Sistemas Ltda.",
+        "Email": "suporte@primedata.com.br",
+        "Telefone": "(51) 3123-4505",
+        "Id": 5
+      }
+    ]
+  },
+  "Equipamentos": {
+    "$id": "6",
+    "$values": [
+      {
+        "$id": "7",
+        "Nome": "Notebook Dell",
+        "PrecoAquisicao": 3000,
+        "DataFabricacao": "2023-10-02T00:00:00",
+        "Fabricante": {
+          "$id": "8",
+          "Nome": "TechNova Equipamentos Ltda.",
+          "Email": "contato@technova.com.br",
+          "Telefone": "(11) 3456-7801",
+          "Id": 1
+        },
+        "Id": 1
+      },
+      {
+        "$id": "9",
+        "Nome": "Monitor Acer",
+        "PrecoAquisicao": 600,
+        "DataFabricacao": "2025-08-25T00:00:00",
+        "Fabricante": {
+          "$ref": "4"
+        },
+        "Id": 2
+      }
+    ]
+  },
+  "Chamados": {
+    "$id": "10",
+    "$values": [
+      {
+        "$id": "11",
+        "Titulo": "Aumento de recurso",
+        "Descricao": "Aumentar a memoria ram do notebook",
+        "DataDeAbertura": "2023-12-02T00:00:00",
+        "Equipamento": {
+          "$ref": "7"
+        },
+        "Id": 1
+      },
+      {
+        "$id": "12",
+        "Titulo": "Manuten\u00E7\u00E3o",
+        "Descricao": "Troca de teclado",
+        "DataDeAbertura": "2025-11-25T00:00:00",
+        "Equipamento": {
+          "$ref": "9"
+        },
+        "Id": 2
+      },
+      {
+        "$id": "13",
+        "Titulo": "Aumento de recurso",
+        "Descricao": "Aumentar a memoria ram do notebook",
+        "DataDeAbertura": "2025-02-25T00:00:00",
+        "Equipamento": {
+          "$ref": "7"
+        },
+        "Id": 3
+      }
+    ]
+  }
+}
