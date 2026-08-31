@@ -1,6 +1,7 @@
 @{
     Layout = "_Layout";
-    ViewBag.Titulo = "Página Inicial";
+    ViewBag.Titulo = "Página Inicial";    
+    //ViewBag.BodyClass = "fundo-index";
 }
 
 <div class="row gap-3 gap-lg-0 mt-4">
@@ -14,7 +15,7 @@
          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
             <div class="col">
                 <div class="card border-primary h-100">
-                    <a class="text-decoration-none" title="Editar" asp-controller="Fabricante" asp-action="Listar">
+                    <a class="btn btn-outline-primary" title="Editar" asp-controller="Fabricante" asp-action="Listar">
                         <div class="card-body">
                             <i class="bi bi-globe"></i>
                             <h5>Fabricantes</h5>
@@ -25,7 +26,7 @@
 
             <div class="col">
                 <div class="card border-primary h-100">
-                    <a class="text-decoration-none" title="Editar" asp-controller="Equipamento" asp-action="Listar">
+                    <a class="btn btn-outline-primary" title="Editar" asp-controller="Equipamento" asp-action="Listar">
                         <div class="card-body">
                             <i class="bi bi-pc-display-horizontal"></i>
                             <h5>Equipamentos</h5>
@@ -36,7 +37,7 @@
 
             <div class="col">
                 <div class="card border-primary h-100">
-                    <a class="text-decoration-none" title="Editar" asp-controller="Chamado" asp-action="Listar">
+                    <a class="btn btn-outline-primary" title="Editar" asp-controller="Chamado" asp-action="Listar">
                         <div class="card-body">
                             <i class="bi bi-card-heading"></i>
                             <h5>Chamados</h5>
