@@ -25,7 +25,7 @@ public static class InjecaoDeDependencias
             return contexto;
         });
 
-        string connectionString = configuration.GetConnectionString("SqlServerDocker")
+        string connectionString = configuration.GetConnectionString("SqlServer")
          ?? throw new InvalidOperationException("Connection string 'SqlServerDocker' not found.");
 
         //Config repositorios
