@@ -7,31 +7,34 @@ using Microsoft.AspNetCore.Mvc;
 
 public sealed class ChamadoController : Controller
 {
-    private readonly RepositorioChamadoEmArquivo repositorioChamado;
-    private readonly RepositorioEquipamentoEmArquivo repositorioEquipamento;
+     private readonly IRepositorioChamado repositorioChamado;
+    private readonly IRepositorioEquipamento repositorioEquipamento;
 
     public ChamadoController(
-        RepositorioChamadoEmArquivo repositorioChamado,
-        RepositorioEquipamentoEmArquivo repositorioEquipamentro
-    )
+        IRepositorioChamado repositorioChamado,
+        IRepositorioEquipamento repositorioEquipamento)
     {
         this.repositorioChamado = repositorioChamado;
-        this.repositorioEquipamento = repositorioEquipamentro;
+        this.repositorioEquipamento = repositorioEquipamento;
     }
 
     [HttpGet]
     public ActionResult Listar()
     {
-        List<ListarChamadoViewModel> viewModels = new List<ListarChamadoViewModel>();
+        List<ListarChamadoViewModel> viewModels = new();
 
         foreach (Chamado c in repositorioChamado.SelecionarTodos())
         {
+
+            int diasEmAberto = (DateTime.Today - c.DataDeAbertura.Date).Days;
+            
             ListarChamadoViewModel viewModel = new ListarChamadoViewModel(
                 c.Id,
                 c.Titulo,
                 c.Descricao,
                 c.DataDeAbertura,
-                c.Equipamento.Nome
+                c.Equipamento.Nome,
+                diasEmAberto
             );
 
             viewModels.Add(viewModel);

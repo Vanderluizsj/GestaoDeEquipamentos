@@ -67,21 +67,30 @@ Compartilhado/
 Modulos/Chamados/Apresentacao/
  ChamadoController.cs
  ChamadoViewModels.cs
-Modulos/Chamados/
- Dominio/Chamado.cs
- Infraestrutura/RepositorioChamadoEmArquivo.cs
+Modulos/Chamados/Dominio/
+ Chamado.cs
+ IRepositorioChamado.cs
+Modulos/Chamados/Infraestrutura/
+ RepositorioChamadoEmArquivo.cs
+ RepositorioChamadoEmSql.cs
 Modulos/Equipamentos/Apresentacao/
  EquipamentoController.cs
  EquipamentoViewModels.cs
-Modulos/Equipamentos/
- Dominio/Equipamento.cs
- Infraestrutura/RepositorioEquipamentoEmArquivo.cs
+Modulos/Equipamentos/Dominio/
+ Equipamento.cs
+ IRepositorioEquipamento.cs
+Modulos/Equipamentos/Infraestrutura/
+ RepositorioEquipamentoEmArquivo.cs
+ RepositorioEquipamentoEmSql.cs
 Modulos/Fabricantes/Apresentacao/
  FabricanteController.cs
  FabricanteViewModels.cs
-Modulos/Fabricantes/
- Dominio/Fabricante.cs
- Infraestrutura/RepositorioFabricanteEmArquivo.cs
+Modulos/Fabricantes/Dominio/
+ Fabricante.cs
+ IRepositorioFabricante.cs
+Modulos/Fabricantes/Infraestrutura/
+ RepositorioFabricanteEmArquivo.cs
+ RepositorioFabricanteEmSql.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
  GestaoDeEquipamentos.WebApp.AssemblyInfo.cs
@@ -90,7 +99,7 @@ obj/Debug/net10.0/
 Program.cs
 
 [metadataReferences]
-<DOTNET>/packs/Microsoft.AspNetCore.App.Ref/10.0.11/ref/net10.0/
+<DOTNET>/packs/Microsoft.AspNetCore.App.Ref/10.0.12/ref/net10.0/
  Microsoft.AspNetCore.Antiforgery.dll
  Microsoft.AspNetCore.Authentication.Abstractions.dll
  Microsoft.AspNetCore.Authentication.BearerToken.dll
@@ -231,7 +240,7 @@ Program.cs
  System.Formats.Cbor.dll
  System.Security.Cryptography.Xml.dll
  System.Threading.RateLimiting.dll
-<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.11/ref/net10.0/
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.12/ref/net10.0/
  Microsoft.CSharp.dll
  Microsoft.VisualBasic.Core.dll
  Microsoft.VisualBasic.dll
@@ -399,9 +408,24 @@ Program.cs
  System.Xml.XPath.dll
  System.Xml.XPath.XDocument.dll
  WindowsBase.dll
+<NUGET>/
+ dapper/2.1.79/lib/net10.0/Dapper.dll
+ microsoft.bcl.cryptography/9.0.13/lib/net9.0/Microsoft.Bcl.Cryptography.dll
+ microsoft.data.sqlclient.extensions.abstractions/7.0.2/lib/netstandard2.0/Microsoft.Data.SqlClient.Extensions.Abstractions.dll
+ microsoft.data.sqlclient.internal.logging/7.0.2/lib/netstandard2.0/Microsoft.Data.SqlClient.Internal.Logging.dll
+ microsoft.data.sqlclient/7.0.2/ref/net9.0/Microsoft.Data.SqlClient.dll
+ microsoft.identitymodel.abstractions/8.16.0/lib/net10.0/Microsoft.IdentityModel.Abstractions.dll
+ microsoft.identitymodel.jsonwebtokens/8.16.0/lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+ microsoft.identitymodel.logging/8.16.0/lib/net10.0/Microsoft.IdentityModel.Logging.dll
+ microsoft.identitymodel.protocols.openidconnect/8.16.0/lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+ microsoft.identitymodel.protocols/8.16.0/lib/net10.0/Microsoft.IdentityModel.Protocols.dll
+ microsoft.identitymodel.tokens/8.16.0/lib/net10.0/Microsoft.IdentityModel.Tokens.dll
+ microsoft.sqlserver.server/1.0.0/lib/netstandard2.0/Microsoft.SqlServer.Server.dll
+ system.identitymodel.tokens.jwt/8.16.0/lib/net10.0/System.IdentityModel.Tokens.Jwt.dll
+ system.security.cryptography.pkcs/9.0.13/lib/net9.0/System.Security.Cryptography.Pkcs.dll
 
 [analyzerReferences]
-<DOTNET>/packs/Microsoft.AspNetCore.App.Ref/10.0.11/analyzers/dotnet/cs/
+<DOTNET>/packs/Microsoft.AspNetCore.App.Ref/10.0.12/analyzers/dotnet/cs/
  Microsoft.AspNetCore.App.Analyzers.dll
  Microsoft.AspNetCore.App.CodeFixes.dll
  Microsoft.AspNetCore.App.SourceGenerators.dll
@@ -409,26 +433,26 @@ Program.cs
  Microsoft.Extensions.Logging.Generators.dll
  Microsoft.Extensions.Options.SourceGeneration.dll
  Microsoft.Extensions.Validation.ValidationsGenerator.dll
-<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.11/analyzers/dotnet/cs/
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.12/analyzers/dotnet/cs/
  Microsoft.Interop.ComInterfaceGenerator.dll
  Microsoft.Interop.JavaScript.JSImportGenerator.dll
  Microsoft.Interop.LibraryImportGenerator.dll
  Microsoft.Interop.SourceGeneration.dll
  System.Text.Json.SourceGeneration.dll
  System.Text.RegularExpressions.Generator.dll
-<DOTNET>/sdk/10.0.111/Sdks/Microsoft.NET.Sdk.Razor/source-generators/
+<DOTNET>/sdk/10.0.112/Sdks/Microsoft.NET.Sdk.Razor/source-generators/
  Microsoft.AspNetCore.Razor.Utilities.Shared.dll
  Microsoft.CodeAnalysis.Razor.Compiler.dll
  Microsoft.Extensions.ObjectPool.dll
-<DOTNET>/sdk/10.0.111/Sdks/Microsoft.NET.Sdk.Web/analyzers/cs/
+<DOTNET>/sdk/10.0.112/Sdks/Microsoft.NET.Sdk.Web/analyzers/cs/
  Microsoft.AspNetCore.Analyzers.dll
  Microsoft.AspNetCore.Mvc.Analyzers.dll
-<DOTNET>/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/analyzers/
+<DOTNET>/sdk/10.0.112/Sdks/Microsoft.NET.Sdk/analyzers/
  Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
  Microsoft.CodeAnalysis.NetAnalyzers.dll
 
 [analyzerConfigFiles]
-<DOTNET>/sdk/10.0.111/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
+<DOTNET>/sdk/10.0.112/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
 obj/Debug/net10.0/GestaoDeEquipamentos.WebApp.GeneratedMSBuildEditorConfig.editorconfig
 
 [additionalFiles]

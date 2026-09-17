@@ -1,21 +1,23 @@
 using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Apresentacao;
 using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Dominio;
-using GestaoDeEquipamentos.WebApp.Modulos.Equipamentos.Infraestrutura;
-using GestaoDeEquipamentos.WebApp.Modulos.Fabricantes.Infraestrutura;
+using GestaoDeEquipamentos.WebApp.Modulos.Fabricantes.Dominio;
 using Microsoft.AspNetCore.Mvc;
 
 public sealed class EquipamentoController : Controller
 {
-    private readonly RepositorioEquipamentoEmArquivo repositorioEquipamento;
-    private readonly RepositorioFabricanteEmArquivo repositorioFabricante;
+    private readonly IRepositorioEquipamento repositorioEquipamento;
+    private readonly IRepositorioFabricante repositorioFabricante;
+    //private readonly IRepositorioChamado repositorioChamado;
 
     public EquipamentoController(
-        RepositorioEquipamentoEmArquivo repositorioEquipamento,
-        RepositorioFabricanteEmArquivo repositorioFabricante
+        IRepositorioEquipamento repositorioEquipamento,
+        IRepositorioFabricante repositorioFabricante
+    //IRepositorioChamado repositorioChamado
     )
     {
         this.repositorioEquipamento = repositorioEquipamento;
         this.repositorioFabricante = repositorioFabricante;
+        //this.repositorioChamado = repositorioChamado;
     }
 
     [HttpGet]

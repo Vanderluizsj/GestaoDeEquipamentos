@@ -8,7 +8,8 @@ public record ListarChamadoViewModel(
     string Descricao,
     DateTime DataDeAbertura,
     string NomeEquipamento
-);
+,
+    int diasEmAberto);
 
 public record SelecionarEquipamentoViewModel(int Id, string Nome);
 

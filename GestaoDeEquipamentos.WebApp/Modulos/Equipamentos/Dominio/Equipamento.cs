@@ -13,7 +13,12 @@ public sealed class Equipamento : EntidadeBase
     {
     }
 
-    public Equipamento(string nome, decimal precoAquisicao, DateTime dataFabricacao, Fabricante fabricante)
+    public Equipamento(
+        string nome,
+        decimal precoAquisicao,
+        DateTime dataFabricacao,
+        Fabricante fabricante
+        )
     {
         Nome = nome;
         PrecoAquisicao = precoAquisicao;
